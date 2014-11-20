@@ -1,0 +1,5 @@
+package Server;
+
+public class ThreadManager {
+	private Map<String,Socket> sockets = new ;
+}

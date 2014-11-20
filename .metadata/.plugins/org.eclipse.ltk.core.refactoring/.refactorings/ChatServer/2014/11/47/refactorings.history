@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;sockets&apos; in &apos;Server.ThreadManager&apos; to &apos;socketMap&apos;&#x0D;&#x0A;- Original project: &apos;ChatServer&apos;&#x0D;&#x0A;- Original element: &apos;Server.ThreadManager.sockets&apos;&#x0D;&#x0A;- Renamed element: &apos;Server.ThreadManager.socketMap&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;sockets&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;Server{ThreadManager.java[ThreadManager^sockets" name="socketMap" references="true" setter="false" stamp="1416317817106" textual="false" version="1.0"/>
+</session>

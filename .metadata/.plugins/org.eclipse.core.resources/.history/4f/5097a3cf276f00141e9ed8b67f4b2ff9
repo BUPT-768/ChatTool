@@ -1,0 +1,13 @@
+package Server;
+
+import java.net.Socket;
+import java.util.HashMap;
+import java.util.Map;
+
+public class ThreadManager {
+	private Map<String, Socket> sockets = new HashMap<String, Socket>();
+
+	public static void main(String[] a){
+		syso
+	}
+}
