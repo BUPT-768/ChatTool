@@ -12,7 +12,7 @@ public class ClientEntity {
             Socket socket = new Socket("127.0.0.1", 768);
             if (socket.isConnected()) {
                 OutputStream out = socket.getOutputStream();
-                out.write("test".getBytes("utf-8"));
+                out.write(("test-"+System.currentTimeMillis()).getBytes("utf-8"));
             }
             InputStream in = socket.getInputStream();
             int count = 0;

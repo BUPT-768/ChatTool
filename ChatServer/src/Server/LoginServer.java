@@ -54,11 +54,12 @@ public class LoginServer extends Thread {
                             e.printStackTrace();
                         }
                     }
-                    if (ID!=null) {
-                        System.out.println(ID+"连接！");
+                    if (ID != null) {
+                        System.out.println(ID + "连接！");
                         OutputStream out = socket.getOutputStream();
                         int port = (int) (Math.random() * 1000);
                         out.write((port + "").getBytes("utf-8"));
+                        socket.close();
                         new newSocketThread(port, ID, this.socketManager).start();
                     }
                 }
