@@ -17,10 +17,10 @@ public class LoginServer extends Thread {
 
     SocketManager socketManager;
 
-    public LoginServer(int serverPort, int waitLen) {
+    public LoginServer(int serverPort, int waitLen, SocketManager socketManager) {
         this.serverPort = serverPort;
         this.waitLen = waitLen;
-        this.socketManager = new SocketManager();
+        this.socketManager = socketManager;
     }
 
 //    class LoginThread extends Thread {
@@ -60,7 +60,7 @@ public class LoginServer extends Thread {
                         int port = (int) (Math.random() * 1000);
                         out.write((port + "").getBytes("utf-8"));
                         socket.close();
-                        new newSocketThread(port, ID, this.socketManager).start();
+                        new ServiceSocketThread(port, ID, this.socketManager).start();
                     }
                 }
             }

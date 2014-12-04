@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -44,6 +45,19 @@ public class SocketManager {
 
     public void onAddSocket(String ID, Socket socket) {
         addSocket(ID, socket);
+    }
+
+    /**
+     * 返回当前服务器上登陆的用户列表
+     *
+     * @return
+     */
+    public ArrayList<String> getUserList() {
+        ArrayList<String> userList = new ArrayList<String>();
+        for (String userID : socketMap.keySet()) {
+            userList.add(userID);
+        }
+        return userList;
     }
 
 
